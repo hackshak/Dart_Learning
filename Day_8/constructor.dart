@@ -8,6 +8,9 @@ void main(){
   var p1 = Person("Shakeeb", 24,"Pakistan");
   var p2 = Person.guest();
 
+  var b1 = Book("Quran", 1000);
+  var b2 = Book("Learning Python", 100);
+
   print(p1.name);
   print(p2.name);
 
@@ -16,6 +19,9 @@ void main(){
   print(anm1.name);
   print(anm1.bread);
 
+
+  print(("${b1.title} - ${b1.price}"));
+  print(("${b2.title} - ${b2.price}"));
 }
 
 
@@ -46,4 +52,13 @@ class Animal{
 
   // Constructor With Optional Parameters
   Animal({this.name = "Lion",this.bread = "Cat"});
+}
+
+
+class Book{
+  String? title;
+  int? price;
+
+// Constructor
+  Book(this.title,this.price);
 }
